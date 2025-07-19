@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fdfdfd;
+  margin: 40px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #444;
+}
+
+#meta-container {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #333;
+}
+
+#meta-kcal {
+  font-weight: bold;
+  background-color: #fff6cc;
+  padding: 3px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.semana {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+@media (min-width: 768px) {
+  .semana {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.dia {
+  background: #fffbe7;
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.05);
+}
+
+.dia h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+  font-size: 0.95em;
+}
+
+.total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input, button {
+  font-size: 0.9em;
+  margin-top: 5px;
+  padding: 3px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.refeicao {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #ccc;
+}
+
+.refeicao strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-refeicao input {
+  width: 100%;
+  padding: 4px;
+  margin-bottom: 4px;
+  font-size: 0.85em;
+}
+
+.form-refeicao button {
+  background-color: #ffd54f;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.semana {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  overflow-x: auto;
+}
+
+/* Scroll horizontal no celular */
+@media (max-width: 1024px) {
+  .semana {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+  }
+
+  .dia {
+    min-width: 320px;
+    flex-shrink: 0;
+  }
+}
